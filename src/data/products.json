@@ -1,0 +1,718 @@
+[
+  {
+    "id": 912,
+    "name": "Adas Cameras",
+    "slug": "mb-accessories",
+    "category": "Driver Monitoring & ADAS",
+    "shortDescription": "Forward-facing Advanced Driver Assistance System (ADAS) camera module providing Forward Collision Warning (FCW) and Lane Departure Warning (LDW) for commercial fleets.",
+    "fullDescription": "The ADAS Camera is a high-precision forward-looking computer vision camera that continuously measures headway distance to vehicles ahead and tracks lane boundary markings. Seamlessly connects to commercial MDVR units to trigger instantaneous accident avoidance alerts.",
+    "specs": {
+      "Optics": "AHD 1080P High-Definition CMOS",
+      "FOV": "60° Focused Far-Range Forward Headway Optics",
+      "Functions": "FCW (Forward Collision), LDW (Lane Departure), HMW (Headway Monitoring)"
+    },
+    "features": [
+      "Accurate real-time distance calculation to prevent rear-end collisions",
+      "Instant audible chime alerts when unintentional lane drift occurs"
+    ],
+    "image": "/assets/products/mb-accessories-thumb.png",
+    "gallery": [
+      "/assets/products/mb-accessories-thumb.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "Adas Cameras",
+    "thumbnail": "/assets/products/mb-accessories-thumb.png"
+  },
+  {
+    "id": 926,
+    "name": "MB Parking Sensor",
+    "slug": "mb-parking-sensor",
+    "category": "Vehicle Sensors & Radar",
+    "shortDescription": "Commercial ultrasonic proximity radar system with weather-sealed IP68 sensors, digital cabin LED distance readout, and escalating audio alerts for heavy vehicle blind-spot hazard mitigation.",
+    "fullDescription": "The MB Parking Sensor system eliminates hazardous blind spots during commercial bus, truck, and trailer reversing maneuvers. Featuring heavy-duty waterproof ultrasonic sensors, a rugged industrial control ECU, and a bright in-cabin display with escalating audible voice/buzzer warnings.",
+    "specs": {
+      "Sensor Technology": "Ultrasonic Commercial Radar",
+      "Detection Range": "0.3m to 2.5m Proximity Distance",
+      "Ingress Protection": "IP68 Weatherproof & Dustproof Sensors",
+      "Alert Mechanism": "Digital LED Metric Distance Readout + Voice/Buzzer Alarm",
+      "Operating Voltage": "DC 9V-36V Commercial Vehicle Voltage"
+    },
+    "features": [
+      "Eliminates dangerous rear blind spots during docking and loading operations",
+      "Heavy-duty waterproof sensors endure road salt, power washes, and extreme weather",
+      "Clear metric distance readout alerts drivers in real-time to avoid collisions"
+    ],
+    "image": "/assets/products/mb-parking-sensor-thumb.png",
+    "gallery": [
+      "/assets/products/mb-parking-sensor-thumb.png",
+      "/assets/products/mb-parking-sensor-gallery-1.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "MB Parking Sensor",
+    "thumbnail": "/assets/products/mb-parking-sensor-thumb.png"
+  },
+  {
+    "id": 927,
+    "name": "MB Bike Black Box Smart",
+    "slug": "mb-bike-black-box-smart",
+    "category": "Motorcycle Dashcams",
+    "shortDescription": "IP67 waterproof dual-camera motorcycle recording system with front and rear EIS stabilization, vibration resistance, and ignition-triggered automated recording for two-wheeler fleets.",
+    "fullDescription": "The MB Bike Black Box Smart is built specifically for two-wheelers, courier bikes, and patrol motorcycles operating in all weather conditions. Featuring IP67 fully waterproof front and rear cameras, high-strength metal bracketry, electronic image stabilization to smooth road bumps, and direct wire ignition connection for automated hands-free operation.",
+    "specs": {
+      "Weatherproofing": "IP67 Waterproof Cameras and Cables",
+      "Channels": "Dual 1080P Front & Rear Camera Units",
+      "Stabilization": "Electronic Image Stabilization (EIS)",
+      "Power Connection": "Hardwire 12V Battery Connection with ACC Ignition Sensor",
+      "Storage": "Supports up to 128GB High-Speed MicroSD"
+    },
+    "features": [
+      "All-weather IP67 sealed design withstands heavy monsoon rains and road grime",
+      "Synchronized front and rear recording records tailgaters and forward hazards",
+      "Automated ignition start-stop eliminates the need for manual battery charging"
+    ],
+    "image": "/assets/products/mb-bike-black-box-smart-thumb.png",
+    "gallery": [
+      "/assets/products/mb-bike-black-box-smart-thumb.png",
+      "/assets/products/mb-bike-black-box-smart-gallery-1.jpg",
+      "/assets/products/mb-bike-black-box-smart-gallery-2.jpg",
+      "/assets/products/mb-bike-black-box-smart-gallery-3.jpg",
+      "/assets/products/mb-bike-black-box-smart-gallery-4.jpg"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "MB Bike Black Box Smart",
+    "thumbnail": "/assets/products/mb-bike-black-box-smart-thumb.png"
+  },
+  {
+    "id": 2258,
+    "name": "High Speed Memory Card 256GB",
+    "slug": "memory-storage-devices",
+    "category": "Memory & Storage",
+    "shortDescription": "Commercial-grade 256GB Class 10 U3 V30 High-Endurance MicroSD card engineered for extended multi-camera fleet recording with maximum retention.",
+    "fullDescription": "Ultra-high endurance 256GB commercial vehicle memory card capable of storing extended multi-channel footage across long-haul interstate freight routes. Immune to heat, magnetic interference, and vehicle vibration.",
+    "specs": {
+      "Capacity": "256 GB Heavy-Duty Endurance",
+      "Speed Class": "Class 10 / UHS-I U3 / V30 (Up to 100MB/s Read / 85MB/s Write)",
+      "Operating Temp": "-25°C to +85°C Commercial Rating"
+    },
+    "features": [
+      "Maximum storage duration for long-haul interstate buses and container trucks",
+      "Engineered for thousands of continuous overwrite hours without degradation"
+    ],
+    "image": "/assets/products/memory-storage-devices-thumb.png",
+    "gallery": [
+      "/assets/products/memory-storage-devices-thumb.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "High Speed Memory Card 256GB",
+    "thumbnail": "/assets/products/memory-storage-devices-thumb.png"
+  },
+  {
+    "id": 2544,
+    "name": "MB DMS (Driver Monitoring System)",
+    "slug": "mb-dms-driver-monitoring-system",
+    "category": "Driver Monitoring & ADAS",
+    "shortDescription": "Intelligent AI Driver Fatigue & Distraction Detection camera module with infrared night recognition and high-decibel audible safety warnings.",
+    "fullDescription": "The MB DMS module is an automotive-grade driver vigilance monitoring camera that analyzes real-time facial landmarks to safeguard fleet operators during long transit routes. Features instant voice warnings and seamless integration with existing MDVR fleet consoles.",
+    "specs": {
+      "Sensor": "Automotive Infrared Monocular Facial Tracking Camera",
+      "Detection Latency": "Under 500ms Instantaneous Analysis",
+      "Alert System": "Dedicated External Buzzer / Audio Voice Alerts",
+      "Power Compatibility": "DC 9V-36V Universal Fleet Voltage"
+    },
+    "features": [
+      "Continuous facial analysis detects driver drowsiness, distraction, and phone use",
+      "Active infrared illumination ensures 24/7 day and night tracking reliability",
+      "Compact stealth form factor mounts cleanly on A-pillar or dashboard"
+    ],
+    "image": "/assets/products/mb-dms-driver-monitoring-system-thumb.png",
+    "gallery": [
+      "/assets/products/mb-dms-driver-monitoring-system-thumb.png",
+      "/assets/products/mb-dms-driver-monitoring-system-gallery-1.jpg",
+      "/assets/products/mb-dms-driver-monitoring-system-gallery-2.jpg",
+      "/assets/products/mb-dms-driver-monitoring-system-gallery-3.jpg",
+      "/assets/products/mb-dms-driver-monitoring-system-gallery-4.jpg",
+      "/assets/products/mb-dms-driver-monitoring-system-gallery-5.jpg",
+      "/assets/products/mb-dms-driver-monitoring-system-gallery-6.jpg",
+      "/assets/products/mb-dms-driver-monitoring-system-gallery-7.jpg"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "MB DMS (Driver Monitoring System)",
+    "thumbnail": "/assets/products/mb-dms-driver-monitoring-system-thumb.png"
+  },
+  {
+    "id": 2545,
+    "name": "MB Bus Black Box 1",
+    "slug": "mb-bus-black-box-1",
+    "category": "Bus & Commercial Dashcams",
+    "shortDescription": "Single-lens high-definition commercial transit camera engineered for continuous forward highway monitoring with wide dynamic range and rugged 9V-36V surge resilience.",
+    "fullDescription": "The MB Bus Black Box 1 is an essential forward-facing surveillance unit built for public transit buses, commercial vans, and school fleets. Featuring an all-glass optical lens with 140° wide field of view, superior night-time low-light clarity, and automotive-grade power regulation.",
+    "specs": {
+      "Resolution": "1080P Full HD @ 30 FPS",
+      "Lens Field of View": "140° Ultra-Wide Angle All-Glass Optics",
+      "Power Input": "DC 9V-36V Wide Range Regulation",
+      "Night Vision": "WDR Low-Light Starlight Image Sensor",
+      "Operating Temp": "-20°C to +70°C"
+    },
+    "features": [
+      "Crystal-clear 1080P road recording with wide dynamic range night clarity",
+      "Rugged windscreen mount resistant to high cabin temperatures",
+      "Seamless loop recording with automatic timestamp and emergency lock"
+    ],
+    "image": "/assets/products/mb-bus-black-box-1-thumb.png",
+    "gallery": [
+      "/assets/products/mb-bus-black-box-1-thumb.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "MB Bus Black Box 1",
+    "thumbnail": "/assets/products/mb-bus-black-box-1-thumb.png"
+  },
+  {
+    "id": 2575,
+    "name": "MB Bus Black Box T2",
+    "slug": "mb-bus-black-box-t2",
+    "category": "Bus & Commercial Dashcams",
+    "shortDescription": "Dual-channel commercial bus recorder providing synchronized road and driver cabin surveillance with lockable security, 9V-36V power regulation, and heavy vibration resistance.",
+    "fullDescription": "The MB Bus Black Box T2 delivers specialized dual-camera surveillance for city transit buses, corporate coaches, and commercial shuttles. Capturing forward highway views and driver cabin interactions in Full HD, the T2 ensures passenger safety and provides irrefutable evidence during road disputes. Designed with automotive transient voltage suppression and rugged screw-mount brackets.",
+    "specs": {
+      "Channels": "Dual AHD 1080P Inputs (Road & Cabin)",
+      "Input Voltage": "DC 9V-36V Automotive Transient Clamping",
+      "Connectors": "Secure 4-Pin Threaded Aviation Plugs",
+      "Recording": "Continuous Loop Overwrite with G-Sensor Lock",
+      "Operating Temp": "-20°C to +70°C"
+    },
+    "features": [
+      "Synchronized dual-angle recording for forward highway and cabin monitoring",
+      "Built-in G-Sensor automatically locks collision and sudden braking events",
+      "Locking aviation cable harness immune to engine and road vibrations"
+    ],
+    "image": "/assets/products/mb-bus-black-box-t2-thumb.png",
+    "gallery": [
+      "/assets/products/mb-bus-black-box-t2-thumb.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "MB Bus Black Box T2",
+    "thumbnail": "/assets/products/mb-bus-black-box-t2-thumb.png"
+  },
+  {
+    "id": 2576,
+    "name": "MB Bus Black Box Smart",
+    "slug": "mb-bus-black-box-smart",
+    "category": "Bus & Commercial Dashcams",
+    "shortDescription": "Flagship 10.1-inch 1080P HD touchscreen MDVR console powered by an Octa-Core Android processor. Integrates dual-channel road and cabin recording, 4G live telematics, GPS tracking, and wide 9V-36V surge protection for passenger buses and heavy fleet transit.",
+    "fullDescription": "The MB Bus Black Box Smart is MetroBasket's premier all-in-one commercial fleet console. Featuring a high-brightness 10.1-inch 1080P Full HD touchscreen display and a high-performance Octa-Core Cortex-A53 processor running Android 8.1, this system delivers synchronized dual-channel recording for forward road conditions and interior passenger cabin surveillance. Built-in 4G LTE connectivity and multi-constellation GNSS (GPS + BDS + GLONASS) provide real-time vehicle telemetry, route playback, and remote live streaming. Engineered with automotive-grade DC 9V-36V surge clamping, high-capacity 512GB TF card storage support, and dedicated reverse parking assistance inputs with secure aviation-locking connections.",
+    "specs": {
+      "Display": "10.1-Inch Full HD 1080P Touchscreen Console",
+      "Processor": "MTK6763 Octa-Core Cortex-A53 (2GB RAM + 32GB ROM)",
+      "Operating System": "Android 8.1 Automotive Framework",
+      "Power Supply": "DC 9V-36V Wide Voltage Surge Clamping",
+      "Channels": "Dual Synchronized 1080P (Road + Passenger Cabin)",
+      "Connectivity": "4G LTE Cellular + Wi-Fi 802.11b/g/n",
+      "Positioning": "GNSS Multi-System (GPS + BDS + GLONASS + AGPS)",
+      "Storage": "High-Endurance TF Card up to 512GB Loop Recording",
+      "Operating Temp": "-20°C to +70°C Heavy Commercial Rating"
+    },
+    "features": [
+      "10.1-inch 1080P high-visibility driver console with intuitive touch controls",
+      "Octa-core processing engine running dual-channel concurrent video pipelines",
+      "Live 4G fleet telematics, GPS vehicle tracking, and remote CMS streaming",
+      "Reverse gear trigger with full-screen parking guideline assistance",
+      "Automotive DC 9V-36V wide-input protection with heavy vehicle surge clamping"
+    ],
+    "image": "/assets/products/mb-bus-black-box-smart-thumb.png",
+    "gallery": [
+      "/assets/products/mb-bus-black-box-smart-thumb.png",
+      "/assets/products/mb-bus-black-box-smart-gallery-1.jpg",
+      "/assets/products/mb-bus-black-box-smart-gallery-2.png",
+      "/assets/products/mb-bus-black-box-smart-gallery-3.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "MB Bus Black Box Smart",
+    "thumbnail": "/assets/products/mb-bus-black-box-smart-thumb.png"
+  },
+  {
+    "id": 2577,
+    "name": "MB Bus Black Box T4",
+    "slug": "mb-bus-black-box-t4",
+    "category": "Bus & Commercial Dashcams",
+    "shortDescription": "Heavy-duty 4-Channel MDVR surveillance hub with shockproof metal housing, locking aviation connectors, multi-angle blind spot coverage, and DC 9V-36V power protection for transit buses and heavy trucks.",
+    "fullDescription": "The MB Bus Black Box T4 is a ruggedized 4-channel commercial vehicle digital video recorder engineered for comprehensive fleet monitoring. Encased in a shock-dampened die-cast metal chassis, the T4 concurrently records up to four synchronized camera angles (front road, driver cabin, passenger aisle, and reverse/rear blind spot). Equipped with threaded 4-pin aviation couplings to prevent cable disconnects during heavy vehicle vibration, wide-voltage 9V-36V surge regulation, and key-locked storage security.",
+    "specs": {
+      "Channels": "4-Channel Synchronized AHD 1080P Inputs",
+      "Enclosure": "Die-Cast Shockproof Metal Chassis with Lockable Door",
+      "Power Regulation": "DC 9V-36V Transient Surge Suppression",
+      "Connectors": "4-Pin Threaded Aviation Lock Connectors",
+      "Storage": "Dual SD / TF Storage with Automated Loop Overwrite",
+      "Operating Temp": "-20°C to +75°C Commercial Grade"
+    },
+    "features": [
+      "Concurrent 4-camera recording for total 360° commercial fleet coverage",
+      "Industrial shock absorption designed for rough transit and highway haulage",
+      "Key-locked memory enclosure preventing unauthorized driver tampering",
+      "Synchronized multi-channel video playback with incident timeline indexing"
+    ],
+    "image": "/assets/products/mb-bus-black-box-t4-thumb.png",
+    "gallery": [
+      "/assets/products/mb-bus-black-box-t4-thumb.png",
+      "/assets/products/mb-bus-black-box-t4-gallery-1.png",
+      "/assets/products/mb-bus-black-box-t4-gallery-2.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "MB Bus Black Box T4",
+    "thumbnail": "/assets/products/mb-bus-black-box-t4-thumb.png"
+  },
+  {
+    "id": 2578,
+    "name": "MB Car Black Box Smart",
+    "slug": "mb-car-black-box-smart",
+    "category": "Car & Light Vehicle Dashcams",
+    "shortDescription": "Compact dual-camera smart dashcam featuring 1080P front road and interior cabin recording, emergency G-sensor incident preservation, and night vision IR for passenger fleets and cabs.",
+    "fullDescription": "The MB Car Black Box Smart provides comprehensive front and in-cabin surveillance for corporate passenger cars, ride-hailing cabs, and light commercial vehicles. Compact windscreen mounting, crystal-clear 1080P optics, interior infrared illumination, and automatic emergency file locking protect drivers and fleet owners against liability claims.",
+    "specs": {
+      "Resolution": "Dual 1080P (Forward Road + In-Cabin)",
+      "Interior Night Vision": "4x Infrared IR LEDs for Cabin Clarity",
+      "Emergency Sensor": "3-Axis Adjustable G-Sensor Shock Detection",
+      "Screen": "Compact IPS Display for Real-Time Alignment",
+      "Power Supply": "DC 12V / 24V with Intelligent Ignition Auto-Start"
+    },
+    "features": [
+      "Dual synchronized recording covers both external road and interior passenger space",
+      "Automatic loop recording prevents storage depletion while preserving lock files",
+      "Clear nighttime cabin recording with automated infrared illumination"
+    ],
+    "image": "/assets/products/mb-car-black-box-smart-thumb.png",
+    "gallery": [
+      "/assets/products/mb-car-black-box-smart-thumb.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "MB Car Black Box Smart",
+    "thumbnail": "/assets/products/mb-car-black-box-smart-thumb.png"
+  },
+  {
+    "id": 2579,
+    "name": "MB Car Black Box C2",
+    "slug": "mb-car-black-box-c2",
+    "category": "Car & Light Vehicle Dashcams",
+    "shortDescription": "Dual-lens vehicle dashcam with high-definition forward optics, interior monitoring, emergency collision locking, and compact form factor for private and commercial passenger fleets.",
+    "fullDescription": "The MB Car Black Box C2 is engineered for reliable, everyday vehicle incident recording. Featuring a high-resolution forward sensor and secondary cabin camera, the C2 automatically begins recording upon ignition and preserves collision files with its built-in G-Sensor.",
+    "specs": {
+      "Resolution": "1080P Full HD Front + Cabin Sub-Camera",
+      "Storage": "MicroSD up to 128GB High-Endurance Support",
+      "Viewing Angle": "150° Wide-Angle Low-Distortion Lens",
+      "Power Input": "DC 12V-24V Vehicle Adapter"
+    },
+    "features": [
+      "High-definition dual camera capture for comprehensive trip accountability",
+      "G-Sensor triggers immediate emergency read-only write protection on collision",
+      "Discreet compact body preserves driver field of view"
+    ],
+    "image": "/assets/products/mb-car-black-box-c2-thumb.png",
+    "gallery": [
+      "/assets/products/mb-car-black-box-c2-thumb.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "MB Car Black Box C2",
+    "thumbnail": "/assets/products/mb-car-black-box-c2-thumb.png"
+  },
+  {
+    "id": 2580,
+    "name": "MB Car Dash Z1",
+    "slug": "mb-car-dash-z1",
+    "category": "Car & Light Vehicle Dashcams",
+    "shortDescription": "Discreet windscreen-mounted Full HD dashcam featuring 1080P video capture, wide 140° field of view, automatic ignition start, and emergency collision lock.",
+    "fullDescription": "The MB Car Dash Z1 is a sleek, low-profile windshield dash camera designed for clear road documentation without obstructing driver visibility. Equipped with Full HD optics, wide dynamic range exposure balance, and reliable loop recording.",
+    "specs": {
+      "Resolution": "1080P Full HD @ 30 FPS",
+      "Field of View": "140° Wide Angle Glass Optics",
+      "Incident Protection": "Automated G-Sensor Event Locking",
+      "Power Input": "DC 12V/24V Auto-Ignition Trigger"
+    },
+    "features": [
+      "Slim discreet footprint easily conceals behind the rearview mirror",
+      "Superb image clarity in bright sunlight and low-light evening driving",
+      "Effortless plug-and-play setup with automatic ignition recording"
+    ],
+    "image": "/assets/products/mb-car-dash-z1-thumb.png",
+    "gallery": [
+      "/assets/products/mb-car-dash-z1-thumb.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "MB Car Dash Z1",
+    "thumbnail": "/assets/products/mb-car-dash-z1-thumb.png"
+  },
+  {
+    "id": 2583,
+    "name": "MB Parking Rador",
+    "slug": "mb-bike-black-box-b1",
+    "category": "Vehicle Sensors & Radar",
+    "shortDescription": "Industrial-grade vehicle proximity sensor array engineered for commercial coaches, lorries, and freight transport with high-accuracy obstacle warning.",
+    "fullDescription": "The MB Parking Rador delivers reliable proximity alerting for commercial haulage and passenger coaches. Built with heavy-duty copper-core wiring, vibration-isolated transducers, and high-intensity alert tones.",
+    "specs": {
+      "Sensor Type": "Heavy Commercial Ultrasonic Transducers",
+      "Detection Distance": "0.3m - 2.5m Accurate Proximity Range",
+      "Voltage": "DC 12V / 24V Commercial Vehicle Compatible",
+      "Alert Output": "High-Decibel Multi-Stage Frequency Beeper"
+    },
+    "features": [
+      "Engineered specifically for extended chassis buses and articulated freight trucks",
+      "Rugged sensor housing impervious to gravel, water, and engine grease",
+      "Rapid response time warns drivers of pedestrian or barrier proximity"
+    ],
+    "image": "/assets/products/mb-bike-black-box-b1-thumb.jpg",
+    "gallery": [
+      "/assets/products/mb-bike-black-box-b1-thumb.jpg"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "MB Parking Rador",
+    "thumbnail": "/assets/products/mb-bike-black-box-b1-thumb.jpg"
+  },
+  {
+    "id": 2728,
+    "name": "MB Black Box DMS",
+    "slug": "mb-black-box-dms",
+    "category": "Driver Monitoring & ADAS",
+    "shortDescription": "AI-driven Driver Monitoring System using neural computer vision to detect driver fatigue, drowsiness, eye-closure, phone usage, and smoking with instantaneous in-cabin audible alerts.",
+    "fullDescription": "The MB Black Box DMS is an advanced artificial intelligence safety system designed to prevent commercial vehicle accidents caused by driver fatigue and distraction. Utilizing infrared facial recognition and deep learning algorithms, the dedicated driver camera monitors blink duration, head nodding, yawning, gaze deviation, cellular phone use, and smoking. When abnormal behavior is detected, the system immediately sounds localized voice warnings and logs telematics event markers.",
+    "specs": {
+      "AI Engine": "Neural Computer Vision Facial Tracking",
+      "DMS Detection": "Fatigue, Drowsiness, Yawning, Phone Use, Smoking, Distraction",
+      "Illumination": "850nm / 940nm Invisible Infrared LEDs (Night Vision)",
+      "Alert Mechanism": "Voice Prompts & High-Decibel Buzzer Module",
+      "Power Input": "DC 9V-36V Commercial Vehicle Voltage",
+      "Response Time": "< 0.5 Seconds Instant Warning"
+    },
+    "features": [
+      "Real-time AI detection of microsleep, closed eyes, and fatigue nodding",
+      "Instant voice notifications alert the driver before collisions occur",
+      "Infrared optical sensor operates flawlessly in pitch-black nighttime cabins",
+      "Significantly reduces long-haul freight and highway passenger fleet accidents"
+    ],
+    "image": "/assets/products/mb-black-box-dms-thumb.png",
+    "gallery": [
+      "/assets/products/mb-black-box-dms-thumb.png",
+      "/assets/products/mb-black-box-dms-gallery-1.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "MB Black Box DMS",
+    "thumbnail": "/assets/products/mb-black-box-dms-thumb.png"
+  },
+  {
+    "id": 2730,
+    "name": "High Speed Memory Card 64GB",
+    "slug": "high-speed-memory-card-64gb",
+    "category": "Memory & Storage",
+    "shortDescription": "Commercial-grade 64GB Class 10 U3 High-Endurance MicroSD card engineered for continuous 24/7 video loop recording and extreme automotive temperatures (-25°C to 85°C).",
+    "fullDescription": "High-endurance 64GB flash memory card specifically manufactured for commercial vehicle dashcams and MDVR systems. Built with MLC/TLC endurance flash memory to endure uninterrupted overwrite cycles without file corruption.",
+    "specs": {
+      "Capacity": "64 GB High-Endurance",
+      "Speed Class": "Class 10 / UHS-I U3 / V30 (Up to 100MB/s Read)",
+      "Operating Temp": "-25°C to +85°C Automotive Grade",
+      "Durability": "Waterproof, Shockproof, X-Ray Proof, Magnet Proof"
+    },
+    "features": [
+      "Optimized for heavy 24/7 multi-channel continuous loop write cycles",
+      "Automotive temperature endurance prevents failure in hot parked vehicles"
+    ],
+    "image": "/assets/products/high-speed-memory-card-64gb-thumb.png",
+    "gallery": [
+      "/assets/products/high-speed-memory-card-64gb-thumb.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "High Speed Memory Card 64GB",
+    "thumbnail": "/assets/products/high-speed-memory-card-64gb-thumb.png"
+  },
+  {
+    "id": 2731,
+    "name": "High Speed Memory Card 128GB",
+    "slug": "high-speed-memory-card-128gb",
+    "category": "Memory & Storage",
+    "shortDescription": "Commercial-grade 128GB Class 10 U3 V30 High-Endurance MicroSD card engineered for multi-channel video loop recording and extreme automotive temperatures.",
+    "fullDescription": "High-endurance 128GB flash memory card built for multi-camera bus and truck black boxes requiring days of continuous high-definition archive storage. Shockproof, vibration-tested, and automotive rated.",
+    "specs": {
+      "Capacity": "128 GB High-Endurance",
+      "Speed Class": "Class 10 / UHS-I U3 / V30 (Up to 100MB/s Read)",
+      "Operating Temp": "-25°C to +85°C Automotive Grade"
+    },
+    "features": [
+      "Extended recording retention for multi-camera commercial transit systems",
+      "Guaranteed high-speed write performance prevents frame drops during emergency incidents"
+    ],
+    "image": "/assets/products/high-speed-memory-card-128gb-thumb.png",
+    "gallery": [
+      "/assets/products/high-speed-memory-card-128gb-thumb.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "High Speed Memory Card 128GB",
+    "thumbnail": "/assets/products/high-speed-memory-card-128gb-thumb.png"
+  },
+  {
+    "id": 2733,
+    "name": "MB Bike Black Box B1",
+    "slug": "bike-black-box-b1",
+    "category": "Motorcycle Dashcams",
+    "shortDescription": "All-weather dual-lens motorcycle dashcam featuring waterproof optics, handle-bar mounted status module, and continuous loop recording for delivery riders and commercial bikes.",
+    "fullDescription": "The MB Bike Black Box B1 brings robust commercial surveillance to motorcycles and delivery fleets. Dual high-definition cameras capture front and rear angles, while an intelligent power module safeguards the bike battery from draining.",
+    "specs": {
+      "Ingress Protection": "IP67 Waterproof Rating for Cameras",
+      "Optics": "Dual 1080P Wide Angle Front & Rear",
+      "Power Input": "12V Motorcycle Battery Line with ACC Detection",
+      "Storage": "High-Endurance Loop Overwrite Support"
+    },
+    "features": [
+      "Dual-angle road recording designed specifically for motorcycle chassis dynamics",
+      "Vibration-dampened mounts prevent jitter on uneven asphalt surfaces",
+      "Intelligent low-voltage battery cutoff protects motorcycle battery life"
+    ],
+    "image": "/assets/products/bike-black-box-b1-thumb.png",
+    "gallery": [
+      "/assets/products/bike-black-box-b1-thumb.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "MB Bike Black Box B1",
+    "thumbnail": "/assets/products/bike-black-box-b1-thumb.png"
+  },
+  {
+    "id": 2737,
+    "name": "Adas Cameras Module",
+    "slug": "adas-cameras",
+    "category": "Driver Monitoring & ADAS",
+    "shortDescription": "Precision forward optical vision sensor for commercial ADAS fleet systems, detecting headway distance and lane boundary markings.",
+    "fullDescription": "Commercial-grade ADAS forward vision sensor designed to interface with telematics gateways and black boxes. Provides precision optical telemetry for collision avoidance.",
+    "specs": {
+      "Resolution": "1080P Full HD @ 30 FPS",
+      "Interface": "4-Pin Aviation Threaded Lock"
+    },
+    "features": [
+      "High-speed optical processing identifies lane lines and vehicle profiles",
+      "Compact windshield mounting with heat-resistant adhesive bracket"
+    ],
+    "image": "/assets/products/adas-cameras-thumb.png",
+    "gallery": [
+      "/assets/products/adas-cameras-thumb.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "Adas Cameras Module",
+    "thumbnail": "/assets/products/adas-cameras-thumb.png"
+  },
+  {
+    "id": 2738,
+    "name": "Aviation cable 15m",
+    "slug": "aviation-cable-15m",
+    "category": "Accessories & Spares",
+    "shortDescription": "15-meter heavy-duty shielded 4-pin threaded aviation locking cable with anti-interference coaxial shielding and oil/heat-resistant PVC jacket for long bus and truck chassis.",
+    "fullDescription": "Professional 15-meter 4-pin aviation extension cable engineered for extended-wheelbase commercial vehicles, multi-axle buses, and semi-trailers. Provides dual video, audio, and power transmission in a single shielded harness.",
+    "specs": {
+      "Length": "15 Meters (49.2 Feet)",
+      "Pin Configuration": "4-Pin Threaded Screw-Lock Aviation Connector",
+      "Shielding": "Dual Copper Braid Anti-Interference Shielding",
+      "Jacket": "Heavy-Duty Oil, UV & Heat-Resistant Automotive PVC"
+    },
+    "features": [
+      "Single-cable solution delivers DC power, video signal, and audio cleanly",
+      "Screw-threaded aviation couplings will not loosen under intense chassis vibration",
+      "Heavy shielding eliminates electrical noise from vehicle alternators and engines"
+    ],
+    "image": "/assets/products/aviation-cable-15m-thumb.png",
+    "gallery": [
+      "/assets/products/aviation-cable-15m-thumb.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "Aviation cable 15m",
+    "thumbnail": "/assets/products/aviation-cable-15m-thumb.png"
+  },
+  {
+    "id": 2742,
+    "name": "Aviation cable 5m",
+    "slug": "aviation-cable-5m",
+    "category": "Accessories & Spares",
+    "shortDescription": "5-meter commercial shielded 4-pin aviation cable for cabin cameras, passenger doors, and front-to-dash vehicle camera runs.",
+    "fullDescription": "High-quality 5-meter 4-pin threaded aviation cable tailored for short commercial vehicle runs including front road cameras, cabin passenger cameras, and driver monitoring units.",
+    "specs": {
+      "Length": "5 Meters (16.4 Feet)",
+      "Connector": "4-Pin Threaded Aviation Connector"
+    },
+    "features": [
+      "Compact run eliminates excess cable clutter inside vehicle dashboards",
+      "Secure locking connector ensures zero video flickering over rough terrain"
+    ],
+    "image": "/assets/products/aviation-cable-5m-thumb.jpg",
+    "gallery": [
+      "/assets/products/aviation-cable-5m-thumb.jpg"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "Aviation cable 5m",
+    "thumbnail": "/assets/products/aviation-cable-5m-thumb.jpg"
+  },
+  {
+    "id": 2755,
+    "name": "AHD 1080p Vehicle Cameras",
+    "slug": "ahd-1080p-vehicle-cameras",
+    "category": "Accessories & Spares",
+    "shortDescription": "IP68 waterproof exterior vehicle camera with 1080P AHD sensor, infrared night vision LEDs, metal bracket, and secure 4-pin aviation connector for bus and truck surveillance.",
+    "fullDescription": "The AHD 1080P Vehicle Camera is an industrial-grade external camera designed for rear, side blind-spot, or forward commercial vehicle surveillance. Features full metal weather-sealed housing, anti-glare sunshade, 18 high-output infrared night vision LEDs, and a threaded 4-pin aviation lock plug.",
+    "specs": {
+      "Sensor": "1080P AHD High-Definition CMOS",
+      "Night Vision": "18x Heavy-Duty Infrared LEDs (15m Night Range)",
+      "Waterproof Rating": "IP68 Fully Submersible & Dustproof",
+      "Connector": "Threaded 4-Pin Aviation Coupling",
+      "Housing": "Die-Cast Metal with Adjustable Stainless Mounting Bracket"
+    },
+    "features": [
+      "Full 1080P high-definition clarity for license plate and vehicle identification",
+      "Powerful infrared night illumination illuminates pitch-black loading bays",
+      "Anti-vibration die-cast metal housing endures harsh road operating environments"
+    ],
+    "image": "/assets/products/ahd-1080p-vehicle-cameras-thumb.jpg",
+    "gallery": [
+      "/assets/products/ahd-1080p-vehicle-cameras-thumb.jpg"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "AHD 1080p Vehicle Cameras",
+    "thumbnail": "/assets/products/ahd-1080p-vehicle-cameras-thumb.jpg"
+  },
+  {
+    "id": 2756,
+    "name": "7\" Display Stand",
+    "slug": "7-display-stand",
+    "category": "Accessories & Spares",
+    "shortDescription": "Heavy-duty adjustable dashboard swivel mount stand with high-strength locking fasteners for 7-inch and 10-inch commercial fleet monitors.",
+    "fullDescription": "Heavy-duty commercial monitor mounting bracket designed to securely hold 7-inch and 10-inch cabin screens on transit bus and truck dashboards. Built with vibration-dampened steel hinges and multi-angle swivel adjustment.",
+    "specs": {
+      "Compatibility": "Universal 7-Inch & 10-Inch Commercial Fleet Displays",
+      "Material": "Reinforced Automotive ABS & Steel Hardware",
+      "Adjustment": "360° Horizontal Rotation with 180° Tilt Locking"
+    },
+    "features": [
+      "Vibration-resistant locking mechanism prevents monitor droop during transit",
+      "Multi-axis angle adjustment gives drivers optimal sightlines without blind spots"
+    ],
+    "image": "/assets/products/7-display-stand-thumb.jpg",
+    "gallery": [
+      "/assets/products/7-display-stand-thumb.jpg"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "7\" Display Stand",
+    "thumbnail": "/assets/products/7-display-stand-thumb.jpg"
+  },
+  {
+    "id": 2757,
+    "name": "Aviation Cable 10m",
+    "slug": "aviation-cable-10m",
+    "category": "Accessories & Spares",
+    "shortDescription": "10-meter commercial shielded 4-pin threaded aviation cable with anti-interference shielding for standard bus, tempo traveller, and rigid truck installations.",
+    "fullDescription": "Professional 10-meter 4-pin aviation cable designed for mid-length commercial vehicles, minibuses, and delivery trucks. Transmits power, ground, video, and audio through a threaded locking interface.",
+    "specs": {
+      "Length": "10 Meters (32.8 Feet)",
+      "Connector": "4-Pin Male to Female Aviation Thread Lock",
+      "Shielding": "Coaxial Anti-RF/EMI Shielded Core"
+    },
+    "features": [
+      "Ideal length for commercial minibuses, ambulances, and delivery box trucks",
+      "Threaded collar prevents moisture ingress and accidental cable disconnects"
+    ],
+    "image": "/assets/products/aviation-cable-10m-thumb.jpg",
+    "gallery": [
+      "/assets/products/aviation-cable-10m-thumb.jpg"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "Aviation Cable 10m",
+    "thumbnail": "/assets/products/aviation-cable-10m-thumb.jpg"
+  },
+  {
+    "id": 2759,
+    "name": "Aviation Cable Sensor with Speaker",
+    "slug": "aviation-cable-sensor-with-speaker",
+    "category": "Accessories & Spares",
+    "shortDescription": "Commercial sensor interface harness featuring integrated high-volume cabin alert speaker and threaded 4-pin aviation connector.",
+    "fullDescription": "Dedicated sensor breakout cable and audio speaker unit designed to interface blind spot radars and reversing sensors directly with commercial vehicle dash systems.",
+    "specs": {
+      "Output": "High-Decibel Automotive Audible Warning Speaker",
+      "Connection": "4-Pin Aviation Threaded Harness"
+    },
+    "features": [
+      "Clear acoustic voice/buzzer alerts for immediate driver hazard reaction",
+      "Integrated heavy-duty cabling for seamless vehicle harness integration"
+    ],
+    "image": "/assets/products/aviation-cable-sensor-with-speaker-thumb.png",
+    "gallery": [
+      "/assets/products/aviation-cable-sensor-with-speaker-thumb.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "Aviation Cable Sensor with Speaker",
+    "thumbnail": "/assets/products/aviation-cable-sensor-with-speaker-thumb.png"
+  },
+  {
+    "id": 2760,
+    "name": "Bus and Truck Parking sensors",
+    "slug": "bus-and-truck-parking-sensors",
+    "category": "Vehicle Sensors & Radar",
+    "shortDescription": "Heavy-duty 4-sensor commercial vehicle ultrasonic radar system with digital in-cabin display and loud voice warning for transit buses and heavy freight trucks.",
+    "fullDescription": "Designed specifically for large commercial vehicles with severe rear blind spots, the Bus and Truck Parking Sensors package features four IP68 sealed ultrasonic sensor heads, extra-long shielded cables, a digital cabin indicator, and a voice alarm module.",
+    "specs": {
+      "Sensor Count": "4x Heavy-Duty IP68 Sealed Transducer Heads",
+      "Cabling": "Extra-Long Coaxial Shielded Cable Harness for Long Wheelbases",
+      "Display": "Digital Dashboard LED Display with Zone Identification",
+      "Voltage Input": "DC 9V-36V Commercial Transit Rating"
+    },
+    "features": [
+      "Tailored cable lengths specifically for 9m to 14m commercial bus and truck chassis",
+      "Zone-specific left/center/right obstacle identification for precise maneuvering",
+      "Waterproof sensor casing withstands daily high-pressure commercial fleet washdowns"
+    ],
+    "image": "/assets/products/bus-and-truck-parking-sensors-thumb.jpg",
+    "gallery": [
+      "/assets/products/bus-and-truck-parking-sensors-thumb.jpg"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "Bus and Truck Parking sensors",
+    "thumbnail": "/assets/products/bus-and-truck-parking-sensors-thumb.jpg"
+  },
+  {
+    "id": 2761,
+    "name": "DMS and ADAS Speaker with Aviation Cable",
+    "slug": "dms-and-adas-speaker-with-aviation-cable",
+    "category": "Accessories & Spares",
+    "shortDescription": "Dedicated high-decibel voice alert speaker with 4-pin aviation cable for DMS driver fatigue and ADAS collision warning systems.",
+    "fullDescription": "High-intensity voice alert audio module engineered specifically for commercial Driver Monitoring Systems (DMS) and Advanced Driver Assistance Systems (ADAS). Delivers clear spoken hazard notifications inside loud bus and truck driver cabins.",
+    "specs": {
+      "Audio Output": "Up to 90dB High-Volume Spoken Alerts",
+      "Connector": "Threaded 4-Pin Aviation Locking Connector"
+    },
+    "features": [
+      "Cuts through diesel engine roar to deliver critical fatigue warning prompts",
+      "Heavy-duty dashboard mount with secure lock-in wiring harness"
+    ],
+    "image": "/assets/products/dms-and-adas-speaker-with-aviation-cable-thumb.png",
+    "gallery": [
+      "/assets/products/dms-and-adas-speaker-with-aviation-cable-thumb.png"
+    ],
+    "pricingType": "Place an Order / Dealer Pricing",
+    "inStock": true,
+    "title": "DMS and ADAS Speaker with Aviation Cable",
+    "thumbnail": "/assets/products/dms-and-adas-speaker-with-aviation-cable-thumb.png"
+  }
+]
