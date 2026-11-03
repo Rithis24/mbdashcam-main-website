@@ -61,7 +61,7 @@ export default function PartnersPage({ onOpenOrder }) {
       {/* Featured OEM Integration Card (Figma Page 4) */}
       <section className="section" style={{ backgroundColor: '#ffffff' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: '40px', alignItems: 'center', backgroundColor: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '16px', padding: '36px', marginBottom: '64px' }}>
+          <div className="partner-feature-grid">
             <div>
               <span className="section-eyebrow">FACTORY ASSEMBLY INTEGRATION</span>
               <h2 style={{ fontSize: 'clamp(1.75rem, 2.8vw, 2.25rem)', fontWeight: 800, color: '#0f172a', marginBottom: '14px', lineHeight: 1.2 }}>

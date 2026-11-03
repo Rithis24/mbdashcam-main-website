@@ -98,7 +98,7 @@ export default function GalleryPage({ onOpenOrder }) {
       {/* Main Video Player Showcase (Figma Page 5) */}
       <section className="section" style={{ backgroundColor: '#ffffff' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1.35fr 0.65fr', gap: '28px', alignItems: 'flex-start', marginBottom: '64px' }}>
+          <div className="gallery-showcase-grid">
             {/* Left Main Video Viewport */}
             <div style={{ backgroundColor: '#000000', borderRadius: '12px', overflow: 'hidden', border: '1px solid #1e293b', boxShadow: 'var(--shadow-xl)' }}>
               <video

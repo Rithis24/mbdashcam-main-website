@@ -151,17 +151,14 @@ export default function ProductDetailPage({ onOpenOrder }) {
                     {Object.entries(product.specs).map(([key, value], idx) => (
                       <div
                         key={key}
+                        className="product-spec-row"
                         style={{
-                          display: 'grid',
-                          gridTemplateColumns: '1.2fr 2fr',
-                          padding: '10px 16px',
                           backgroundColor: idx % 2 === 0 ? '#f8fafc' : '#ffffff',
-                          fontSize: '0.8125rem',
                           borderBottom: idx < Object.keys(product.specs).length - 1 ? '1px solid #e2e8f0' : 'none'
                         }}
                       >
-                        <span style={{ fontWeight: 600, color: '#475569' }}>{key}</span>
-                        <span style={{ fontWeight: 700, color: '#0f172a' }}>{value}</span>
+                        <span className="product-spec-key">{key}</span>
+                        <span className="product-spec-val">{value}</span>
                       </div>
                     ))}
                   </div>
@@ -230,7 +227,7 @@ export default function ProductDetailPage({ onOpenOrder }) {
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
                 gap: '24px'
               }}
             >

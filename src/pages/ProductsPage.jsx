@@ -9,6 +9,7 @@ export default function ProductsPage({ onOpenOrder }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(categorySlug || 'all');
   const [selectedVoltage, setSelectedVoltage] = useState('all');
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   const categoryFilters = [
     { id: 'all', label: 'All Products (26)' },
@@ -102,9 +103,28 @@ export default function ProductsPage({ onOpenOrder }) {
       {/* Main Layout: Left Sidebar Filters + Right Product Grid */}
       <section className="section" style={{ backgroundColor: '#f8fafc' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '32px', alignItems: 'flex-start' }}>
+          {/* Mobile Filter Toggle */}
+          <div className="mobile-catalog-filter-bar">
+            <button
+              type="button"
+              className="btn-mobile-catalog-toggle"
+              onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
+              aria-label="Toggle filters"
+            >
+              <Filter size={16} />
+              <span>{mobileFiltersOpen ? 'Hide Filters' : 'Filter & Search'}</span>
+              {(selectedCategory !== 'all' || searchQuery) && (
+                <span className="mobile-active-filter-badge">Active</span>
+              )}
+            </button>
+            <span className="mobile-catalog-count">
+              <strong>{filteredProducts.length}</strong> Products
+            </span>
+          </div>
+
+          <div className="products-layout-grid">
             {/* Left Sidebar Filters */}
-            <div style={{ backgroundColor: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '24px', display: 'flex', flexDirection: 'column', gap: '24px', position: 'sticky', top: '92px' }}>
+            <aside className={`products-sidebar-panel ${mobileFiltersOpen ? 'mobile-visible' : ''}`}>
               {/* Search Box */}
               <div>
                 <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: '#64748b', letterSpacing: '0.05em', marginBottom: '8px' }}>
@@ -135,13 +155,16 @@ export default function ProductsPage({ onOpenOrder }) {
                         type="radio"
                         name="categoryFilter"
                         checked={selectedCategory === cat.id}
-                        onChange={() => setSelectedCategory(cat.id)}
+                        onChange={() => {
+                          setSelectedCategory(cat.id);
+                          setMobileFiltersOpen(false);
+                        }}
                       />
                       <span>{cat.label.replace(/\s\(.*\)/, '')}</span>
                     </label>
                   ))}
                   <button
-                    onClick={() => { setSelectedCategory('all'); setSearchQuery(''); }}
+                    onClick={() => { setSelectedCategory('all'); setSearchQuery(''); setMobileFiltersOpen(false); }}
                     style={{ marginTop: '4px', textAlign: 'left', color: '#0284c7', fontSize: '0.75rem', fontWeight: 700, padding: 0 }}
                   >
                     Reset Category Filter
@@ -190,22 +213,22 @@ export default function ProductsPage({ onOpenOrder }) {
                   <span>Download PDF</span>
                 </a>
               </div>
-            </div>
+            </aside>
 
             {/* Right Product Grid */}
-            <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+            <div className="products-main-content">
+              <div className="products-header-stats-bar">
                 <span style={{ fontSize: '0.875rem', color: '#64748b', fontWeight: 600 }}>
                   Showing <strong style={{ color: '#0f172a' }}>{filteredProducts.length}</strong> Products
                 </span>
                 <span className="badge badge-emerald">
                   <Check size={12} />
-                  <span>All Models Available for Immediate Fleet Delivery</span>
+                  <span>Immediate Fleet Delivery</span>
                 </span>
               </div>
 
               {filteredProducts.length > 0 ? (
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>
+                <div className="products-catalog-grid">
                   {filteredProducts.map((product) => (
                     <ProductCard key={product.id} product={product} onOpenOrder={onOpenOrder} />
                   ))}

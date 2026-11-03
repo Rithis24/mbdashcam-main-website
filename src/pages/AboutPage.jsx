@@ -46,18 +46,7 @@ export default function AboutPage({ onOpenOrder }) {
               </p>
 
               {/* 4 Verified Metric Counters */}
-              <div
-                style={{
-                  backgroundColor: '#f8fafc',
-                  border: '1px solid #e2e8f0',
-                  borderRadius: '12px',
-                  padding: '24px',
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(2, 1fr)',
-                  gap: '20px',
-                  marginBottom: '28px'
-                }}
-              >
+              <div className="about-stats-grid">
                 <div>
                   <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0284c7', fontFamily: 'var(--font-heading)' }} data-count="11570" data-suffix="+">
                     11,570+

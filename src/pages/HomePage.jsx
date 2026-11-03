@@ -361,7 +361,7 @@ export default function HomePage({ onOpenOrder }) {
           ========================================================================= */}
       <section className="section section-subtle">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: '48px', alignItems: 'center' }}>
+          <div className="home-telematics-grid">
             <div>
               <span className="section-eyebrow">DOMESTIC TELEMATICS LEADER</span>
               <h2 className="section-title">
@@ -371,7 +371,7 @@ export default function HomePage({ onOpenOrder }) {
                 MB Automotives India (A Unit of Metro Basket) designs and manufactures dedicated commercial telematics hardware with statutory MSME recognition and ISO 9001:2015 quality control.
               </p>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '32px' }}>
+              <div className="home-stats-grid">
                 <div style={{ backgroundColor: '#ffffff', padding: '16px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
                   <div style={{ fontSize: '1.625rem', fontWeight: 800, color: '#0284c7' }} data-count="10000" data-suffix="+">
                     10,000+
