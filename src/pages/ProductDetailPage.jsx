@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import {
   ArrowLeft,
@@ -29,6 +29,12 @@ export default function ProductDetailPage({ onOpenOrder }) {
       : [product.thumbnail || product.image];
 
   const [activeImage, setActiveImage] = useState(galleryImages[0]);
+
+  useEffect(() => {
+    if (galleryImages && galleryImages.length > 0) {
+      setActiveImage(galleryImages[0]);
+    }
+  }, [productId]);
 
   // Related products from same category
   const relatedProducts = productsData

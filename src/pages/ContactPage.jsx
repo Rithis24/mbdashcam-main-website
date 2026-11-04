@@ -240,10 +240,9 @@ export default function ContactPage() {
                       <strong style={{ fontSize: '0.9375rem', color: '#0f172a', display: 'block', marginBottom: '2px' }}>
                         Direct Telephones:
                       </strong>
-                      <div style={{ fontSize: '0.875rem', color: '#64748b', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                        <a href="tel:+918489880444" style={{ color: '#0284c7' }}>Primary: +91-8489880444</a>
-                        <a href="tel:+918220955966" style={{ color: '#0284c7' }}>Secondary: +91-8220955966</a>
-                        <span>Office: +91-9360101871 / +91-9751141147</span>
+                      <div style={{ fontSize: '0.875rem', color: '#64748b', display: 'flex', flexDirection: 'column', gap: '3px' }}>
+                        <div><strong style={{ color: '#0f172a' }}>Sales & Institutional:</strong> <a href="tel:+919360101871" style={{ color: '#0284c7' }}>+91 93601 01871</a></div>
+                        <div><strong style={{ color: '#0f172a' }}>Service & Warranty:</strong> <a href="tel:+918838100080" style={{ color: '#0284c7' }}>+91 88381 00080</a></div>
                       </div>
                     </div>
                   </div>
@@ -254,13 +253,12 @@ export default function ContactPage() {
                       <strong style={{ fontSize: '0.9375rem', color: '#0f172a', display: 'block', marginBottom: '2px' }}>
                         Email Correspondence:
                       </strong>
-                      <div style={{ fontSize: '0.875rem', color: '#64748b', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                        <a href="mailto:mbautomotivesindia@gmail.com" style={{ color: '#0284c7' }}>
-                          Corporate: mbautomotivesindia@gmail.com
-                        </a>
-                        <a href="mailto:metrobasketin@gmail.com" style={{ color: '#0284c7' }}>
-                          Commercial: metrobasketin@gmail.com
-                        </a>
+                      <div style={{ fontSize: '0.875rem', color: '#64748b', display: 'flex', flexDirection: 'column', gap: '3px' }}>
+                        <div><strong style={{ color: '#0f172a' }}>Commercial Sales:</strong> <a href="mailto:sales@mbdashcam.com" style={{ color: '#0284c7' }}>sales@mbdashcam.com</a></div>
+                        <div><strong style={{ color: '#0f172a' }}>Technical Support:</strong> <a href="mailto:support@mbdashcam.com" style={{ color: '#0284c7' }}>support@mbdashcam.com</a></div>
+                        <div style={{ marginTop: '4px', fontSize: '0.8125rem' }}>
+                          Websites: <a href="https://www.mbdashcam.com" target="_blank" rel="noopener noreferrer" style={{ color: '#0284c7' }}>www.mbdashcam.com</a> • <a href="https://www.metrobasket.in" target="_blank" rel="noopener noreferrer" style={{ color: '#0284c7' }}>www.metrobasket.in</a>
+                        </div>
                       </div>
                     </div>
                   </div>

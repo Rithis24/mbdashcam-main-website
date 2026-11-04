@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   ChevronDown,
+  ChevronRight,
   Menu,
   X,
   FileText,
@@ -23,30 +24,38 @@ import {
   Award,
   Users,
   ShieldAlert,
-  Truck
+  Truck,
+  Phone
 } from 'lucide-react';
 import MbEmblem from './MbEmblem';
 
 export default function Header({ onOpenOrder }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null); // 'products' | 'applications' | 'gallery' | 'resources'
+  const [mobileExpandedSection, setMobileExpandedSection] = useState(null); // 'products' | 'applications' | 'gallery' | 'resources'
   const [scrolled, setScrolled] = useState(false);
+  
+  const headerRef = useRef(null);
   const location = useLocation();
 
+  // Scroll detection for sticky header shadow and backdrop
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 15);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close menus on route change
   useEffect(() => {
     setMobileMenuOpen(false);
     setActiveDropdown(null);
+    setMobileExpandedSection(null);
     document.body.style.overflow = '';
   }, [location.pathname]);
 
+  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -57,6 +66,37 @@ export default function Header({ onOpenOrder }) {
       document.body.style.overflow = '';
     };
   }, [mobileMenuOpen]);
+
+  // Close dropdown on click outside or Escape key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setActiveDropdown(null);
+        setMobileMenuOpen(false);
+      }
+    };
+
+    const handleClickOutside = (e) => {
+      if (headerRef.current && !headerRef.current.contains(e.target)) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const toggleDropdown = (name) => {
+    setActiveDropdown((prev) => (prev === name ? null : name));
+  };
+
+  const toggleMobileSection = (name) => {
+    setMobileExpandedSection((prev) => (prev === name ? null : name));
+  };
 
   const productCategories = [
     {
@@ -167,18 +207,23 @@ export default function Header({ onOpenOrder }) {
   };
 
   return (
-    <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
-      <nav className="header-main-nav">
-        {/* Brand Identity */}
-        <Link to="/" className="brand-logo-group">
-          <MbEmblem size={42} />
+    <header ref={headerRef} className={`site-header ${scrolled ? 'scrolled' : ''}`}>
+      <nav className="header-main-nav" aria-label="Main Navigation">
+        {/* Brand Identity on the Left */}
+        <Link to="/" className="brand-logo-group" aria-label="MB Automotives India Homepage">
+          <div className="brand-logo-emblem-wrap">
+            <MbEmblem size={38} />
+          </div>
           <div className="brand-logo-text">
             <span className="brand-logo-primary">MB AUTOMOTIVES INDIA</span>
-            <span className="brand-logo-subline">(A Unit of MetroBasket) • Your Safety, Our Priority</span>
+            <div className="brand-logo-subline">
+              <span className="brand-tagline">Your Safety, Our Priority</span>
+              <span className="brand-unit-tag">• A Unit of MetroBasket</span>
+            </div>
           </div>
         </Link>
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation Links in One Row */}
         <ul className="nav-links-list">
           <li>
             <Link to="/" className={`nav-link-item ${isActive('/') ? 'active' : ''}`}>
@@ -198,19 +243,22 @@ export default function Header({ onOpenOrder }) {
             onMouseEnter={() => setActiveDropdown('products')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <Link
-              to="/products"
-              className={`nav-link-item ${isActive('/products') ? 'active' : ''}`}
+            <button
+              type="button"
+              onClick={() => toggleDropdown('products')}
+              className={`nav-link-item ${isActive('/products') || activeDropdown === 'products' ? 'active' : ''}`}
+              aria-expanded={activeDropdown === 'products'}
+              aria-haspopup="true"
             >
               <span>Products</span>
               <ChevronDown
-                size={14}
+                size={13}
                 className={`chevron-icon ${activeDropdown === 'products' ? 'rotated' : ''}`}
               />
-            </Link>
+            </button>
 
             {activeDropdown === 'products' && (
-              <div className="mega-dropdown-menu">
+              <div className="mega-dropdown-menu mega-dropdown-products" role="menu">
                 <div className="mega-dropdown-header">
                   <span className="mega-dropdown-eyebrow">
                     COMMERCIAL VEHICLE SECURITY & TELEMATICS
@@ -234,9 +282,10 @@ export default function Header({ onOpenOrder }) {
                         to={cat.path}
                         className="mega-dropdown-item"
                         onClick={() => setActiveDropdown(null)}
+                        role="menuitem"
                       >
                         <div className="mega-dropdown-icon-box">
-                          <IconComponent size={17} />
+                          <IconComponent size={16} />
                         </div>
                         <div className="mega-dropdown-content">
                           <div className="mega-dropdown-item-title">
@@ -260,19 +309,22 @@ export default function Header({ onOpenOrder }) {
             onMouseEnter={() => setActiveDropdown('applications')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <Link
-              to="/applications"
-              className={`nav-link-item ${isActive('/applications') ? 'active' : ''}`}
+            <button
+              type="button"
+              onClick={() => toggleDropdown('applications')}
+              className={`nav-link-item ${isActive('/applications') || activeDropdown === 'applications' ? 'active' : ''}`}
+              aria-expanded={activeDropdown === 'applications'}
+              aria-haspopup="true"
             >
               <span>Applications</span>
               <ChevronDown
-                size={14}
+                size={13}
                 className={`chevron-icon ${activeDropdown === 'applications' ? 'rotated' : ''}`}
               />
-            </Link>
+            </button>
 
             {activeDropdown === 'applications' && (
-              <div className="mega-dropdown-menu" style={{ maxWidth: '640px' }}>
+              <div className="mega-dropdown-menu mega-dropdown-applications" role="menu">
                 <div className="mega-dropdown-header">
                   <span className="mega-dropdown-eyebrow">
                     TARGET INDUSTRY & FLEET SOLUTIONS
@@ -296,9 +348,10 @@ export default function Header({ onOpenOrder }) {
                         to={app.path}
                         className="mega-dropdown-item"
                         onClick={() => setActiveDropdown(null)}
+                        role="menuitem"
                       >
                         <div className="mega-dropdown-icon-box">
-                          <IconComponent size={17} />
+                          <IconComponent size={16} />
                         </div>
                         <div className="mega-dropdown-content">
                           <div className="mega-dropdown-item-title">
@@ -336,19 +389,22 @@ export default function Header({ onOpenOrder }) {
             onMouseEnter={() => setActiveDropdown('gallery')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <Link
-              to="/gallery"
-              className={`nav-link-item ${isActive('/gallery') ? 'active' : ''}`}
+            <button
+              type="button"
+              onClick={() => toggleDropdown('gallery')}
+              className={`nav-link-item ${isActive('/gallery') || activeDropdown === 'gallery' ? 'active' : ''}`}
+              aria-expanded={activeDropdown === 'gallery'}
+              aria-haspopup="true"
             >
               <span>Gallery</span>
               <ChevronDown
-                size={14}
+                size={13}
                 className={`chevron-icon ${activeDropdown === 'gallery' ? 'rotated' : ''}`}
               />
-            </Link>
+            </button>
 
             {activeDropdown === 'gallery' && (
-              <div className="mega-dropdown-menu" style={{ maxWidth: '480px' }}>
+              <div className="mega-dropdown-menu mega-dropdown-gallery" role="menu">
                 <div className="mega-dropdown-header">
                   <span className="mega-dropdown-eyebrow">MEDIA & FIELD VAULT</span>
                 </div>
@@ -361,9 +417,10 @@ export default function Header({ onOpenOrder }) {
                         to={item.path}
                         className="mega-dropdown-item"
                         onClick={() => setActiveDropdown(null)}
+                        role="menuitem"
                       >
                         <div className="mega-dropdown-icon-box">
-                          <IconComponent size={17} />
+                          <IconComponent size={16} />
                         </div>
                         <div className="mega-dropdown-content">
                           <div className="mega-dropdown-item-title">{item.label}</div>
@@ -383,19 +440,22 @@ export default function Header({ onOpenOrder }) {
             onMouseEnter={() => setActiveDropdown('resources')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <Link
-              to="/resources"
-              className={`nav-link-item ${isActive('/resources') ? 'active' : ''}`}
+            <button
+              type="button"
+              onClick={() => toggleDropdown('resources')}
+              className={`nav-link-item ${isActive('/resources') || activeDropdown === 'resources' ? 'active' : ''}`}
+              aria-expanded={activeDropdown === 'resources'}
+              aria-haspopup="true"
             >
               <span>Resources</span>
               <ChevronDown
-                size={14}
+                size={13}
                 className={`chevron-icon ${activeDropdown === 'resources' ? 'rotated' : ''}`}
               />
-            </Link>
+            </button>
 
             {activeDropdown === 'resources' && (
-              <div className="mega-dropdown-menu" style={{ maxWidth: '520px' }}>
+              <div className="mega-dropdown-menu mega-dropdown-resources" role="menu">
                 <div className="mega-dropdown-header">
                   <span className="mega-dropdown-eyebrow">DOCUMENTATION & SUPPORT</span>
                 </div>
@@ -408,9 +468,10 @@ export default function Header({ onOpenOrder }) {
                         to={item.path}
                         className="mega-dropdown-item"
                         onClick={() => setActiveDropdown(null)}
+                        role="menuitem"
                       >
                         <div className="mega-dropdown-icon-box">
-                          <IconComponent size={17} />
+                          <IconComponent size={16} />
                         </div>
                         <div className="mega-dropdown-content">
                           <div className="mega-dropdown-item-title">{item.label}</div>
@@ -424,7 +485,7 @@ export default function Header({ onOpenOrder }) {
             )}
           </li>
 
-          {/* Contact Us */}
+          {/* Contact */}
           <li>
             <Link to="/contact" className={`nav-link-item ${isActive('/contact') ? 'active' : ''}`}>
               <span>Contact</span>
@@ -432,96 +493,237 @@ export default function Header({ onOpenOrder }) {
           </li>
         </ul>
 
-        {/* Action Group */}
+        {/* Action Group on Right */}
         <div className="header-actions-group">
           <a
             href="/assets/docs/MB-Catalogue.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="header-catalog-btn"
+            title="Download Master Catalogue PDF"
           >
             <FileText size={14} />
             <span>Catalog</span>
           </a>
 
           <button
+            type="button"
             onClick={() => onOpenOrder && onOpenOrder()}
             className="btn-header-cta"
+            title="Request Commercial Fleet Quotation"
           >
             <ShoppingBag size={14} />
-            <span>Request Quote</span>
+            <span>Get Quote</span>
           </button>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Menu Toggle Button */}
           <button
+            type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="mobile-toggle-btn"
-            aria-label="Toggle navigation menu"
+            aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="mobile-nav-drawer">
-          <Link to="/" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/') ? 'active' : ''}`}>
-            Home
-          </Link>
-          <Link to="/about" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/about') ? 'active' : ''}`}>
-            About Us (Since 2019)
-          </Link>
-          <Link to="/products" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/products') ? 'active' : ''}`}>
-            Hardware Catalog (26 Products)
-          </Link>
-          <Link to="/applications" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/applications') ? 'active' : ''}`}>
-            Applications (Bus, Truck, Car, Bike)
-          </Link>
-          <Link to="/warranty" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/warranty') ? 'active' : ''}`}>
-            Warranty Registration
-          </Link>
-          <Link to="/certificates" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/certificates') ? 'active' : ''}`}>
-            Certifications & Compliance
-          </Link>
-          <Link to="/partners" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/partners') ? 'active' : ''}`}>
-            Channel Partners
-          </Link>
-          <Link to="/gallery" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/gallery') ? 'active' : ''}`}>
-            Video & Field Vault
-          </Link>
-          <Link to="/downloads" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/downloads') ? 'active' : ''}`}>
-            Downloads & Brochures
-          </Link>
-          <Link to="/resources" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/resources') ? 'active' : ''}`}>
-            Resources & FAQs
-          </Link>
-          <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/contact') ? 'active' : ''}`}>
-            Contact & Support
-          </Link>
+        <div className="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+          <div className="mobile-nav-scroll-content">
+            {/* Direct Links */}
+            <Link to="/" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/') ? 'active' : ''}`}>
+              Home
+            </Link>
 
-          <div style={{ paddingTop: '16px', borderTop: '1px solid rgba(255, 255, 255, 0.1)', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                if (onOpenOrder) onOpenOrder();
-              }}
-              className="btn btn-primary"
-              style={{ width: '100%', justifyContent: 'center' }}
-            >
-              <ShoppingBag size={16} />
-              <span>Request Fleet Quote</span>
-            </button>
-            <a
-              href="/assets/docs/MB-Catalogue.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-secondary"
-              style={{ width: '100%', justifyContent: 'center', backgroundColor: '#0f172a', color: '#38bdf8', borderColor: '#334155' }}
-            >
-              <FileText size={14} />
-              <span>Download Catalog PDF</span>
-            </a>
+            <Link to="/about" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/about') ? 'active' : ''}`}>
+              About Us (Operating Since 2019)
+            </Link>
+
+            {/* Products Accordion */}
+            <div className="mobile-nav-accordion-item">
+              <button
+                type="button"
+                onClick={() => toggleMobileSection('products')}
+                className={`mobile-nav-accordion-btn ${mobileExpandedSection === 'products' ? 'expanded' : ''}`}
+                aria-expanded={mobileExpandedSection === 'products'}
+              >
+                <span>Hardware Products (26 Models)</span>
+                <ChevronDown size={16} className={`chevron-icon ${mobileExpandedSection === 'products' ? 'rotated' : ''}`} />
+              </button>
+
+              {mobileExpandedSection === 'products' && (
+                <div className="mobile-nav-sublist">
+                  <Link to="/products" onClick={() => setMobileMenuOpen(false)} className="mobile-nav-sublink highlight">
+                    <span>View Complete Hardware Range (26 Models)</span>
+                    <ArrowRight size={13} />
+                  </Link>
+                  {productCategories.map((cat, idx) => (
+                    <Link
+                      key={idx}
+                      to={cat.path}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="mobile-nav-sublink"
+                    >
+                      <cat.icon size={15} color="#38bdf8" />
+                      <span>{cat.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Applications Accordion */}
+            <div className="mobile-nav-accordion-item">
+              <button
+                type="button"
+                onClick={() => toggleMobileSection('applications')}
+                className={`mobile-nav-accordion-btn ${mobileExpandedSection === 'applications' ? 'expanded' : ''}`}
+                aria-expanded={mobileExpandedSection === 'applications'}
+              >
+                <span>Applications & Fleet Solutions</span>
+                <ChevronDown size={16} className={`chevron-icon ${mobileExpandedSection === 'applications' ? 'rotated' : ''}`} />
+              </button>
+
+              {mobileExpandedSection === 'applications' && (
+                <div className="mobile-nav-sublist">
+                  <Link to="/applications" onClick={() => setMobileMenuOpen(false)} className="mobile-nav-sublink highlight">
+                    <span>All Commercial Fleet Solutions</span>
+                    <ArrowRight size={13} />
+                  </Link>
+                  {applications.map((app, idx) => (
+                    <Link
+                      key={idx}
+                      to={app.path}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="mobile-nav-sublink"
+                    >
+                      <app.icon size={15} color="#38bdf8" />
+                      <span>{app.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Downloads */}
+            <Link to="/downloads" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/downloads') ? 'active' : ''}`}>
+              Downloads (Catalogues & Docs)
+            </Link>
+
+            {/* Warranty */}
+            <Link to="/warranty" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/warranty') ? 'active' : ''}`}>
+              Warranty Registration & Status
+            </Link>
+
+            {/* Gallery Accordion */}
+            <div className="mobile-nav-accordion-item">
+              <button
+                type="button"
+                onClick={() => toggleMobileSection('gallery')}
+                className={`mobile-nav-accordion-btn ${mobileExpandedSection === 'gallery' ? 'expanded' : ''}`}
+                aria-expanded={mobileExpandedSection === 'gallery'}
+              >
+                <span>Media & Field Gallery</span>
+                <ChevronDown size={16} className={`chevron-icon ${mobileExpandedSection === 'gallery' ? 'rotated' : ''}`} />
+              </button>
+
+              {mobileExpandedSection === 'gallery' && (
+                <div className="mobile-nav-sublist">
+                  {galleryLinks.map((item, idx) => (
+                    <Link
+                      key={idx}
+                      to={item.path}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="mobile-nav-sublink"
+                    >
+                      <item.icon size={15} color="#38bdf8" />
+                      <span>{item.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Resources Accordion */}
+            <div className="mobile-nav-accordion-item">
+              <button
+                type="button"
+                onClick={() => toggleMobileSection('resources')}
+                className={`mobile-nav-accordion-btn ${mobileExpandedSection === 'resources' ? 'expanded' : ''}`}
+                aria-expanded={mobileExpandedSection === 'resources'}
+              >
+                <span>Resources & Support</span>
+                <ChevronDown size={16} className={`chevron-icon ${mobileExpandedSection === 'resources' ? 'rotated' : ''}`} />
+              </button>
+
+              {mobileExpandedSection === 'resources' && (
+                <div className="mobile-nav-sublist">
+                  {resourceLinks.map((item, idx) => (
+                    <Link
+                      key={idx}
+                      to={item.path}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="mobile-nav-sublink"
+                    >
+                      <item.icon size={15} color="#38bdf8" />
+                      <span>{item.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Certificates & Partners Direct Links */}
+            <Link to="/certificates" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/certificates') ? 'active' : ''}`}>
+              Certifications & Homologation
+            </Link>
+
+            <Link to="/partners" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/partners') ? 'active' : ''}`}>
+              Channel Partners & OEM Network
+            </Link>
+
+            <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/contact') ? 'active' : ''}`}>
+              Contact Us & Facilities
+            </Link>
+
+            {/* Drawer Actions & Contact */}
+            <div className="mobile-nav-drawer-actions">
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  if (onOpenOrder) onOpenOrder();
+                }}
+                className="btn btn-primary"
+                style={{ width: '100%', justifyContent: 'center' }}
+              >
+                <ShoppingBag size={16} />
+                <span>Request Fleet Quotation</span>
+              </button>
+
+              <a
+                href="/assets/docs/MB-Catalogue.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+                style={{ width: '100%', justifyContent: 'center', backgroundColor: '#0f172a', color: '#38bdf8', borderColor: '#334155' }}
+              >
+                <FileText size={15} />
+                <span>Download Master Catalogue (PDF)</span>
+              </a>
+
+              <div className="mobile-nav-contact-strip">
+                <a href="tel:+919360101871" className="mobile-nav-call-link">
+                  <Phone size={14} color="#38bdf8" />
+                  <span>Sales: +91 93601 01871</span>
+                </a>
+                <span className="mobile-nav-divider">•</span>
+                <span className="mobile-nav-hours">Since 2019</span>
+              </div>
+            </div>
           </div>
         </div>
       )}
