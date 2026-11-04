@@ -11,6 +11,9 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ProductsPage from './pages/ProductsPage';
 import ProductDetailPage from './pages/ProductDetailPage';
+import ApplicationsPage from './pages/ApplicationsPage';
+import WarrantyPage from './pages/WarrantyPage';
+import ResourcesPage from './pages/ResourcesPage';
 import GalleryPage from './pages/GalleryPage';
 import DownloadsPage from './pages/DownloadsPage';
 import CertificatesPage from './pages/CertificatesPage';
@@ -54,11 +57,26 @@ export default function App() {
           <Route path="/shop" element={<Navigate to="/products" replace />} />
           <Route path="/product/:productId" element={<ProductDetailPage onOpenOrder={handleOpenOrder} />} />
 
+          {/* Applications */}
+          <Route path="/applications" element={<ApplicationsPage onOpenOrder={handleOpenOrder} />} />
+          <Route path="/applications/:appId" element={<ApplicationsPage onOpenOrder={handleOpenOrder} />} />
+
+          {/* Warranty Registration */}
+          <Route path="/warranty" element={<WarrantyPage />} />
+          <Route path="/warranty-registration" element={<Navigate to="/warranty" replace />} />
+
+          {/* Resources & FAQs */}
+          <Route path="/resources" element={<ResourcesPage />} />
+          <Route path="/faqs" element={<Navigate to="/resources" replace />} />
+          <Route path="/faq" element={<Navigate to="/resources" replace />} />
+          <Route path="/reviews" element={<Navigate to="/about" replace />} />
+
           {/* Gallery & Subcategories */}
           <Route path="/gallery" element={<GalleryPage onOpenOrder={handleOpenOrder} />} />
           <Route path="/gallery/:galleryType" element={<GalleryPage onOpenOrder={handleOpenOrder} />} />
           <Route path="/video-gallery" element={<Navigate to="/gallery/videos" replace />} />
           <Route path="/event-gallery" element={<Navigate to="/gallery/events" replace />} />
+          <Route path="/events" element={<Navigate to="/gallery/events" replace />} />
           <Route path="/photo-gallery" element={<Navigate to="/gallery/photos" replace />} />
 
           {/* Downloads & Subcategories */}
