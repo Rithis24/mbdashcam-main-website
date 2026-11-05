@@ -552,6 +552,15 @@ h1, h2, h3, h4, h5, h6 {
   animation: dropdownFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.mega-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
 @keyframes dropdownFadeIn {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
@@ -794,6 +803,34 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav-accordion-item {
   display: flex;
   flex-direction: column;
+}
+
+.mobile-nav-accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mobile-nav-accordion-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.mobile-nav-accordion-toggle-btn:hover,
+.mobile-nav-accordion-toggle-btn.expanded {
+  color: #38bdf8;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .mobile-nav-accordion-btn {

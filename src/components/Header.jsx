@@ -243,19 +243,17 @@ export default function Header({ onOpenOrder }) {
             onMouseEnter={() => setActiveDropdown('products')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button
-              type="button"
-              onClick={() => toggleDropdown('products')}
+            <Link
+              to="/products"
+              onClick={() => setActiveDropdown(null)}
               className={`nav-link-item ${isActive('/products') || activeDropdown === 'products' ? 'active' : ''}`}
-              aria-expanded={activeDropdown === 'products'}
-              aria-haspopup="true"
             >
               <span>Products</span>
               <ChevronDown
                 size={13}
                 className={`chevron-icon ${activeDropdown === 'products' ? 'rotated' : ''}`}
               />
-            </button>
+            </Link>
 
             {activeDropdown === 'products' && (
               <div className="mega-dropdown-menu mega-dropdown-products" role="menu">
@@ -309,19 +307,17 @@ export default function Header({ onOpenOrder }) {
             onMouseEnter={() => setActiveDropdown('applications')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button
-              type="button"
-              onClick={() => toggleDropdown('applications')}
+            <Link
+              to="/applications"
+              onClick={() => setActiveDropdown(null)}
               className={`nav-link-item ${isActive('/applications') || activeDropdown === 'applications' ? 'active' : ''}`}
-              aria-expanded={activeDropdown === 'applications'}
-              aria-haspopup="true"
             >
               <span>Applications</span>
               <ChevronDown
                 size={13}
                 className={`chevron-icon ${activeDropdown === 'applications' ? 'rotated' : ''}`}
               />
-            </button>
+            </Link>
 
             {activeDropdown === 'applications' && (
               <div className="mega-dropdown-menu mega-dropdown-applications" role="menu">
@@ -389,19 +385,17 @@ export default function Header({ onOpenOrder }) {
             onMouseEnter={() => setActiveDropdown('gallery')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button
-              type="button"
-              onClick={() => toggleDropdown('gallery')}
+            <Link
+              to="/gallery"
+              onClick={() => setActiveDropdown(null)}
               className={`nav-link-item ${isActive('/gallery') || activeDropdown === 'gallery' ? 'active' : ''}`}
-              aria-expanded={activeDropdown === 'gallery'}
-              aria-haspopup="true"
             >
               <span>Gallery</span>
               <ChevronDown
                 size={13}
                 className={`chevron-icon ${activeDropdown === 'gallery' ? 'rotated' : ''}`}
               />
-            </button>
+            </Link>
 
             {activeDropdown === 'gallery' && (
               <div className="mega-dropdown-menu mega-dropdown-gallery" role="menu">
@@ -440,19 +434,17 @@ export default function Header({ onOpenOrder }) {
             onMouseEnter={() => setActiveDropdown('resources')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button
-              type="button"
-              onClick={() => toggleDropdown('resources')}
+            <Link
+              to="/resources"
+              onClick={() => setActiveDropdown(null)}
               className={`nav-link-item ${isActive('/resources') || activeDropdown === 'resources' ? 'active' : ''}`}
-              aria-expanded={activeDropdown === 'resources'}
-              aria-haspopup="true"
             >
               <span>Resources</span>
               <ChevronDown
                 size={13}
                 className={`chevron-icon ${activeDropdown === 'resources' ? 'rotated' : ''}`}
               />
-            </button>
+            </Link>
 
             {activeDropdown === 'resources' && (
               <div className="mega-dropdown-menu mega-dropdown-resources" role="menu">
@@ -544,15 +536,30 @@ export default function Header({ onOpenOrder }) {
 
             {/* Products Accordion */}
             <div className="mobile-nav-accordion-item">
-              <button
-                type="button"
-                onClick={() => toggleMobileSection('products')}
-                className={`mobile-nav-accordion-btn ${mobileExpandedSection === 'products' ? 'expanded' : ''}`}
-                aria-expanded={mobileExpandedSection === 'products'}
-              >
-                <span>Hardware Products (26 Models)</span>
-                <ChevronDown size={16} className={`chevron-icon ${mobileExpandedSection === 'products' ? 'rotated' : ''}`} />
-              </button>
+              <div className="mobile-nav-accordion-header">
+                <Link
+                  to="/products"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`mobile-nav-link ${isActive('/products') ? 'active' : ''}`}
+                  style={{ flex: 1, paddingRight: '4px' }}
+                >
+                  Hardware Products (26 Models)
+                </Link>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleMobileSection('products');
+                  }}
+                  className={`mobile-nav-accordion-toggle-btn ${mobileExpandedSection === 'products' ? 'expanded' : ''}`}
+                  aria-label="Toggle Products Submenu"
+                >
+                  <ChevronDown
+                    size={18}
+                    className={`chevron-icon ${mobileExpandedSection === 'products' ? 'rotated' : ''}`}
+                  />
+                </button>
+              </div>
 
               {mobileExpandedSection === 'products' && (
                 <div className="mobile-nav-sublist">
@@ -577,15 +584,30 @@ export default function Header({ onOpenOrder }) {
 
             {/* Applications Accordion */}
             <div className="mobile-nav-accordion-item">
-              <button
-                type="button"
-                onClick={() => toggleMobileSection('applications')}
-                className={`mobile-nav-accordion-btn ${mobileExpandedSection === 'applications' ? 'expanded' : ''}`}
-                aria-expanded={mobileExpandedSection === 'applications'}
-              >
-                <span>Applications & Fleet Solutions</span>
-                <ChevronDown size={16} className={`chevron-icon ${mobileExpandedSection === 'applications' ? 'rotated' : ''}`} />
-              </button>
+              <div className="mobile-nav-accordion-header">
+                <Link
+                  to="/applications"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`mobile-nav-link ${isActive('/applications') ? 'active' : ''}`}
+                  style={{ flex: 1, paddingRight: '4px' }}
+                >
+                  Applications & Fleet Solutions
+                </Link>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleMobileSection('applications');
+                  }}
+                  className={`mobile-nav-accordion-toggle-btn ${mobileExpandedSection === 'applications' ? 'expanded' : ''}`}
+                  aria-label="Toggle Applications Submenu"
+                >
+                  <ChevronDown
+                    size={18}
+                    className={`chevron-icon ${mobileExpandedSection === 'applications' ? 'rotated' : ''}`}
+                  />
+                </button>
+              </div>
 
               {mobileExpandedSection === 'applications' && (
                 <div className="mobile-nav-sublist">
@@ -620,15 +642,30 @@ export default function Header({ onOpenOrder }) {
 
             {/* Gallery Accordion */}
             <div className="mobile-nav-accordion-item">
-              <button
-                type="button"
-                onClick={() => toggleMobileSection('gallery')}
-                className={`mobile-nav-accordion-btn ${mobileExpandedSection === 'gallery' ? 'expanded' : ''}`}
-                aria-expanded={mobileExpandedSection === 'gallery'}
-              >
-                <span>Media & Field Gallery</span>
-                <ChevronDown size={16} className={`chevron-icon ${mobileExpandedSection === 'gallery' ? 'rotated' : ''}`} />
-              </button>
+              <div className="mobile-nav-accordion-header">
+                <Link
+                  to="/gallery"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`mobile-nav-link ${isActive('/gallery') ? 'active' : ''}`}
+                  style={{ flex: 1, paddingRight: '4px' }}
+                >
+                  Media & Field Gallery
+                </Link>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleMobileSection('gallery');
+                  }}
+                  className={`mobile-nav-accordion-toggle-btn ${mobileExpandedSection === 'gallery' ? 'expanded' : ''}`}
+                  aria-label="Toggle Gallery Submenu"
+                >
+                  <ChevronDown
+                    size={18}
+                    className={`chevron-icon ${mobileExpandedSection === 'gallery' ? 'rotated' : ''}`}
+                  />
+                </button>
+              </div>
 
               {mobileExpandedSection === 'gallery' && (
                 <div className="mobile-nav-sublist">
@@ -649,15 +686,30 @@ export default function Header({ onOpenOrder }) {
 
             {/* Resources Accordion */}
             <div className="mobile-nav-accordion-item">
-              <button
-                type="button"
-                onClick={() => toggleMobileSection('resources')}
-                className={`mobile-nav-accordion-btn ${mobileExpandedSection === 'resources' ? 'expanded' : ''}`}
-                aria-expanded={mobileExpandedSection === 'resources'}
-              >
-                <span>Resources & Support</span>
-                <ChevronDown size={16} className={`chevron-icon ${mobileExpandedSection === 'resources' ? 'rotated' : ''}`} />
-              </button>
+              <div className="mobile-nav-accordion-header">
+                <Link
+                  to="/resources"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`mobile-nav-link ${isActive('/resources') ? 'active' : ''}`}
+                  style={{ flex: 1, paddingRight: '4px' }}
+                >
+                  Resources & Support
+                </Link>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleMobileSection('resources');
+                  }}
+                  className={`mobile-nav-accordion-toggle-btn ${mobileExpandedSection === 'resources' ? 'expanded' : ''}`}
+                  aria-label="Toggle Resources Submenu"
+                >
+                  <ChevronDown
+                    size={18}
+                    className={`chevron-icon ${mobileExpandedSection === 'resources' ? 'rotated' : ''}`}
+                  />
+                </button>
+              </div>
 
               {mobileExpandedSection === 'resources' && (
                 <div className="mobile-nav-sublist">
