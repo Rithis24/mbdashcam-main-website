@@ -784,6 +784,13 @@ export default function HomePage({ onOpenOrder }) {
           </div>
 
           <VideoShowcaseSlider />
+
+          <div style={{ textAlign: 'center', marginTop: '36px' }}>
+            <Link to="/gallery" className="btn btn-secondary" style={{ backgroundColor: '#0f172d', color: '#38bdf8', borderColor: '#1e293b' }}>
+              <span>Explore Complete Video & Event Gallery</span>
+              <ArrowRight size={16} />
+            </Link>
+          </div>
         </div>
       </section>
 

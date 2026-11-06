@@ -22,15 +22,17 @@ const videoOptions = [
 
 export default function VideoShowcaseSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
-  // Automatically switch video every 2 seconds without auto-playing the video
+  // Switch video gently every 8 seconds when not paused or playing
   useEffect(() => {
+    if (isPaused) return;
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % videoOptions.length);
-    }, 2000); // 2 seconds
+    }, 8000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isPaused]);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? videoOptions.length - 1 : prev - 1));
@@ -43,7 +45,11 @@ export default function VideoShowcaseSlider() {
   const activeVideo = videoOptions[currentIndex];
 
   return (
-    <div className="simple-video-showcase-container">
+    <div
+      className="simple-video-showcase-container"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       {/* Left Navigation Arrow */}
       <button
         type="button"
@@ -63,6 +69,8 @@ export default function VideoShowcaseSlider() {
           playsInline
           poster={activeVideo.poster}
           className="simple-video-player"
+          onPlay={() => setIsPaused(true)}
+          onPause={() => setIsPaused(false)}
         >
           <source src={activeVideo.src} type="video/mp4" />
           Your browser does not support HTML5 video playback.
